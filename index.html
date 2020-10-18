@@ -1,12 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+
 <head>
-<title>
-    Sun-Spy Interactive Webpage
-</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="interaction.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <meta charset="utf-8" />
+
 </head>
+
 <body>
-    <h1>Sun-spy Interactive Video Page</h1>
+    <div id="container">
+        <div id="video-container">
+            <div id="left-video" class="video-box">
+                <video class="video-player" preload="auto" controls autoplay>
+                    <source class="left" src="video/video-day.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="right-video" class="video-box">
+                <video class="video-player" preload="auto" controls autoplay style="filter: brightness(0%);">
+                    <source class=" right" src="video/video-night.mp4" type="video/mp4">
+                </video>
+                <input id="button-click-01" class="my-button" type="button" value="Exit Surveillance Mode" />
+                <input id="button-click-02" class="my-button" type="button" value="Enter Surveillance Mode"
+                    style="display:none" />
+            </div>
+        </div>
+        <div id="brightness-slider" style="display:none">
+
+            <i class="fas fa-eye"></i>
+            <input type="range" id="slider-adjust" min="0" max="100" value="0">
+        </div>
+    </div>
+
 </body>
 
 </html>

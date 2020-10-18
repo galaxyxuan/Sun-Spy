@@ -13,24 +13,30 @@
 
 <body>
     <div id="container">
+
         <div id="video-container">
-            <div id="left-video" class="video-box">
-                <video class="video-player" preload="auto" controls autoplay>
+
+            <div class="video-box">
+                <video class="video-player" id="left-video" preload="auto" autoplay="true" muted="true" controls loop>
                     <source class="left" src="video/video-day.mp4" type="video/mp4">
                 </video>
             </div>
-            <div id="right-video" class="video-box">
-                <video class="video-player" preload="auto" controls autoplay style="filter: brightness(0%);">
+            <div class="video-box">
+                <video class="video-player" id="right-video" preload="auto" autoplay="true" muted="true" controls loop
+                    style="filter: brightness(0%);">
                     <source class=" right" src="video/video-night.mp4" type="video/mp4">
                 </video>
-                <input id="button-click-01" class="my-button" type="button" value="Exit Surveillance Mode" />
-                <input id="button-click-02" class="my-button" type="button" value="Enter Surveillance Mode"
-                    style="display:none" />
+                <div id="control-panel">
+                    <i id="icon-logo" class="fas fa-eye"></i>
+                    <input id="button-click-01" class="my-button" type="button" value="Exit Surveillance Mode" />
+                    <input id="button-click-02" class="my-button" type="button" value="Enter Surveillance Mode"
+                        style="display:none" />
+
+                </div>
+
             </div>
         </div>
         <div id="brightness-slider" style="display:none">
-
-            <i class="fas fa-eye"></i>
             <input type="range" id="slider-adjust" min="0" max="100" value="0">
         </div>
     </div>

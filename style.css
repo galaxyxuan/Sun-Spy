@@ -9,9 +9,7 @@ body {
     padding: 0;
     background-color: black;
   }
-canvas {
-    display: block;
-  }
+
 
 #container {
  height: 100vh;
@@ -21,16 +19,27 @@ canvas {
   display:flex;
   }
 
-.video-player {
+.video-box .video-player {
     width: 50vw;
-    height:auto;
+    height:auto; /*need to edit the two videos to be the same height*/
+}
+
+#icon-logo{
+  margin:0 0 20px 0;
 }
 
 .fas {
 	color: white;
 }
 
+#control-panel {
+  display:block;
+  margin-top:50px;
+  width:50vw;
+}
+
 #brightness-slider {
+margin-top: 3vh;
 margin-left:50vw;
 widows: 10vw;;
 height:auto;
@@ -46,6 +55,7 @@ justify-content: space-between;
 }
 
 #slider-adjust {
+  width:30vw; /*change the slider length gere*/
   cursor:pointer;
 }
 
